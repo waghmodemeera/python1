@@ -1,0 +1,49 @@
+**********************************LPAD*************************************************
+
+---LPAD(expression1 , n, expression2)
+
+Lpad is USED FOR PADDING THE LEFT SIDE OF THE STRING WITH SPECIFIC SET OF CHARACTERS
+
+n SHOLULD NOT BE 0 OR NEGATIVE VALUE
+
+
+There are 2 CASES IN LPAD----
+
+n>LENGTH OF EXP1
+n<LENGTH OF EXP1
+-----------------------------------------------------------------
+case1) when n > length of string
+SELECT LPAD('Maharashtra', 20, '*') FROM DUAL 
+---------it will add 9 characters to the left side of the string
+-----------------------------------------------------------------
+
+case2) when n < length of string
+SELECT LPAD('Maharashtra', 5, '*') FROM DUAL 
+---------it will add 9 characters to the left side of the string
+-----------------------------------------------------------------
+so to use LPAD function- n should be always greater than your length of string
+-----------------------------------------------------------------
+**********************************RPAD*************************************************
+---RPAD(expression1 , n, expression2)
+
+RPAD is USED FOR PADDING THE LEFT SIDE OF THE STRING WITH SPECIFIC SET OF CHARACTERS
+
+n SHOLULD NOT BE 0 OR NEGATIVE VALUE
+
+
+There are 2 CASES IN RPAD----
+
+n>LENGTH OF EXP1
+n<LENGTH OF EXP1
+-----------------------------------------------------------------
+case1) when n > length of string
+SELECT RPAD('Maharashtra', 20, '*') FROM DUAL 
+---------it will add 9 characters to the RIGHT side of the string
+-----------------------------------------------------------------
+
+case2) when n < length of string
+SELECT RPAD('Maharashtra', 5, '*') FROM DUAL 
+---------it will add 9 characters to the RIGHT side of the string
+-----------------------------------------------------------------
+so to use RPAD function- n should be always greater than your length of string
+***************************************************************************************
