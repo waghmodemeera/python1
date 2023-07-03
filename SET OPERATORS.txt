@@ -1,0 +1,82 @@
+
+***************************************************************
+-----set operators-----
+***************************************************************
+
+table A = {1,2,3,4,5,6,7,8,9,10}
+
+table B = {5,6,8,9,12,25,56,4,22}
+----------------------------
+
+1. no of columns in table should be same
+2. Data type should be same 
+
+----------------------------
+----types of set operators---
+union
+{1,2,3,4,5,6,7,8,9,10,12,25,56,22}
+----------------------------
+union all
+{1,2,3,4,5,6,7,8,9,10,5,6,8,9,12,25,56,4,22}
+----------------------------
+intersect
+{4,5,6,8,9}
+----------------------------
+minus   
+a-b  ----- elements present in 'a' which are other than common elements in A AND B
+{1,2,3,7,10}
+----------------------------
+b-a  ----- elements present in 'b' which are other than common elements in A AND B
+{12,25,56,22}
+----------------------------
+
+minus----- Except distinct
+----------------------------
+**************************************************************
+DemoA- 
+
+create table DemoA
+as
+select * from demo1
+----------------------
+create table DemoB
+as
+select * from demoA
+-------------------
+update demoA
+set Emp_id = 12
+where Emp_id = 6
+-------------------
+update demoA
+set dept_id = 12
+where Emp_id = 4
+-------------------
+
+select * from demoA 
+select * from demoB
+-------------------
+****************************Union******************************
+select * from DemoA
+union
+select * from DemoB
+****************************Union all**************************
+select * from DemoA
+union all
+select * from DemoB
+****************************intersect**************************
+select * from DemoA
+intersect
+select * from DemoB
+****************************Minus******************************
+----A-B
+select * from DemoA
+minus
+select * from DemoB
+-----------------------------------------
+----B-A
+select * from DemoB
+minus
+select * from DemoA
+
+****************************************************************
+
